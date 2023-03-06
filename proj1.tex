@@ -1,9 +1,14 @@
-\documentclass[10pt, a4paper, twocolumn]{article}
+\documentclass[hidelinks, 10pt, a4paper, twocolumn]{article}
 \usepackage[czech]{babel}
 \usepackage[left=1.6cm,text={18cm, 24.7cm},top=1.5cm]{geometry}
 \usepackage[utf8]{inputenc}
-\title{Typografie a publikování - 1. projekt}
-\author{Lukáš Večerka \\ xvecer30@stud.fit.vutbr.cz}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc} 
+\usepackage{changepage}
+
+\title{Typografie a publikování -- 1. projekt}
+\author{Lukáš Večerka \\ \href{mailto: xvecer30@stud.fit.vutbr.cz}{xvecer30@stud.fit.vutbr.cz}}
 \date{}
 
 \begin{document}
@@ -22,22 +27,27 @@ Porušení konzistence sazby působí v textu rušivě a unavuje čtenářův zr
 
 
 \section{Smíšená sazba}
-
 Smíšená sazba má o něco volnější pravidla.
 Klasická hladká sazba se doplňuje o další řezy písma pro zvýraznění důležitých pojmů.
-Existuje "pravidlo":
+Existuje \uv{pravidlo}:
+\medskip
 
-Čím více druhů, řezů, velikostí, barev písma a jiných efektů použijeme, tím profesionálněji bude dokument vypadat.
-Čtenář tím bude vždy nadšen!
+\begin{adjustwidth}{0.75cm}{0.75cm}
 
-Tímto pravidlem se nesmíte nikdy řídit.
-Příliš časté zvýrazňování textových elementů a změny velikosti písma jsou známkou amatérismu autora a působí velmi rušivě.
+\hspace{\parindent} Čím více  \textbf{\texttt{druhů}}, \textit{řezů}, {\tiny velikostí}, {\color{green}barev} písma a~{\color{blue}\textsc{jiných efektů}} \underline{použijeme}, {\color{red}tím profesionálněji} bude {\fontfamily{pzc}\selectfont dokument} vypadat.
+Čtenář tím bude \textbf{ \Huge vždy nadšen! }
+
+\end{adjustwidth}
+\medskip
+
+\textsc{Tímto pravidlem se \underline{nesmíte nikdy řídit.}}
+Příliš časté zvýrazňování textových elementů a změny {\scriptsize velikosti} písma jsou známkou \textbf{amatérismu autora} a působí \texttt{\textbf{velmi rušivě.}}
 Dobře navržený dokument nemá obsahovat více než 4 řezy či druhy písma.
-Dobře navržený dokument je decentní, ne chaotický.
+Dobře navržený dokument je \underline{decentní, ne chaotický.}
 
-Důležitým znakem správně vysázeného dokumentu je konzistence - například tučný řez písma bude vyhrazen pouze pro klíčová slova, kurzíva pouze pro doposud neznámé pojmy a nebude se to míchat.
+Důležitým znakem správně vysázeného dokumentu je konzistence -- například \textbf{tučný řez} písma bude vyhrazen pouze pro klíčová slova, \textit{kurzíva} pouze pro doposud neznámé pojmy a nebude se to míchat.
 Kurzíva nepůsobí tak rušivě a používá se častěji.
-V LaTeXu ji sázíme raději příkazem \emph{text} než \textit{text}.
+V \LaTeX u ji sázíme raději příkazem \verb|\emph{text}| než \verb|\textit{text}|.
 
 Smíšená sazba se nejčastěji používá pro sazbu vědeckých článků a technických zpráv.
 U delších dokumentů vědeckého či technického charakteru je zvykem vysvětlit význam různých typů zvýraznění v úvodní kapitole.
@@ -57,15 +67,6 @@ U delších dokumentů vědeckého či technického charakteru je zvykem vysvět
     Zvažte, zda je nelze seskupit.
 \end{itemize}
 
-
-
-
-
-
-
-
-
-
 \section{České odlišnosti}
 
 Česká sazba se oproti okolnímu světu v některých aspektech mírně liší.
@@ -79,12 +80,12 @@ Pokud je uvozována celá věta, sází se koncová tečka před uvozovku, pokud
 
 Druhou odlišností je pravidlo pro sázení konců řádků.
 V české sazbě do bloku by řádek neměl končit osamocenou jednopísmennou předložkou nebo spojkou.
-Spojkou "a" končit může pouze při sazbě do šířky 25 liter.
-Abychom LaTeXu zabránili v sázení osamocených předložek, spojujeme je s následujícím slovem nezlomitelnou mezerou.
-Tu sázíme pomocí znaku ~ (vlnka, tilda).
-Pro systematické doplnění vlnek slouží volně šiřitelný program vlna od pana Olšáka\footnote[2]{Viz http://petr.olsak.net/ftp/olsak/vlna/}, který je vhodné si v rámci projektu vyzkoušet.
+Spojkou \uv{a} končit může pouze při sazbě do šířky 25 liter.
+Abychom \LaTeX u zabránili v sázení osamocených předložek, spojujeme je s následujícím slovem \textit{nezlomitelnou mezerou}.
+Tu sázíme pomocí znaku \verb|~| (vlnka, tilda).
+Pro systematické doplnění vlnek slouží volně šiřitelný program \textit{vlna} od pana Olšáka\footnote[2]{Viz \url{http://petr.olsak.net/ftp/olsak/vlna/}}, který je vhodné si v rámci projektu vyzkoušet.
 
-Balíček fontenc slouží ke korektnímu kódovaní znaků s diakritikou, aby bylo možno v textu vyhledávat a kopírovat z něj.
+Balíček \texttt{\textbf{fontenc}} slouží ke korektnímu kódovaní znaků s~diakritikou, aby bylo možno v textu vyhledávat a kopírovat z něj.
 
 
 \section{Závěr}
@@ -92,6 +93,6 @@ Balíček fontenc slouží ke korektnímu kódovaní znaků s diakritikou, aby b
 Tento dokument schválně obsahuje několik typografických prohřešků.
 Sekce 2 a 3 obsahují typografické chyby.
 V kontextu celého textu je jistě snadno najdete.
-Je dobré znát možnosti LaTeXu, ale je také nutné vědět, kdy je nepoužít.
+Je dobré znát možnosti \LaTeX u, ale je také nutné vědět, kdy je nepoužít.
 
 \end{document}
