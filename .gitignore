@@ -278,3 +278,5 @@ TSWLatexianTemp*
 zadani/*
 *.pdf
 *.ps
+
+.DS_Store
